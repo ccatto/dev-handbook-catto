@@ -1,3 +1,27 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node / JS tooling (if you add Docusaurus or npm scripts later)
+node_modules/
+npm-debug.log
+yarn-error.log
+dist/
+build/
+
+# Python tooling (if you use MkDocs later)
+__pycache__/
+*.pyc
+site/
+
+# VS Code / JetBrains
+.vscode/
+.idea/
+
+# Env / secrets
+.env
+
+
 # Logs
 logs
 *.log
