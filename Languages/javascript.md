@@ -1,6 +1,4 @@
-# Javascript
-
-# JavaScript - Developer Handbook
+# JavaScript - Catto Developer Handbook
 
 **JavaScript (JS)** is a **high-level, interpreted programming language** that powers **web development**, enabling dynamic behavior on websites, server-side development, and even mobile and desktop applications.  
 

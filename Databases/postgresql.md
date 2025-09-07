@@ -1,6 +1,4 @@
-# Postgresql
-
-# PostgreSQL Overview for C# Web API + Angular Frontend
+# Postgresql | Catto Dev Handbook
 
 **PostgreSQL** is a powerful, open-source relational database system known for reliability, feature richness, and standards compliance. It is widely used with C# Web APIs and Angular front ends.
 
@@ -9,7 +7,7 @@
 ## 🔹 Overview
 
 * Open-source object-relational database system.
-* ACID-compliant and transactional.
+* ACID-compliant and transactional. (guarantees the reliability and integrity of our data)
 * Supports advanced data types (JSON, arrays, XML, hstore).
 * Extensible: functions, stored procedures, triggers, custom data types.
 * Highly compatible with **ORMs** like Entity Framework Core, TypeORM, Sequelize, and Prisma.
@@ -64,23 +62,7 @@
 
 ---
 
-## 🔹 Code Flow Diagram
-
-```
-[ Client (Angular) ]
-        |
-        v
-[ Controller ]
-        |
-        v
-[ Service Layer ]
-        |
-        v
-[ Repository / DbContext ]
-        |
-        v
-[ PostgreSQL Database ]
-```
+### Code Flow
 
 * Client sends HTTP request.
 * Controller forwards to Service layer.

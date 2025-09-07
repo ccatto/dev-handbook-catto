@@ -1,6 +1,4 @@
-# Prisma 
-
-# Prisma ORM Overview for C# Web API / NestJS + Angular Frontend
+# Prisma ORM Overview | Catto Dev Handbook
 
 **Prisma** is a modern, open-source ORM for Node.js and TypeScript. It simplifies database access by generating a type-safe client, making it ideal for backend frameworks like **NestJS** or **Node.js APIs** that serve Angular frontends.
 

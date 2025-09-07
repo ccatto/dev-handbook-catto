@@ -1,6 +1,5 @@
-# General
-
-# Software Development - Developer Handbook
+# General Software Development 
+## Catto Developer Handbook
 
 Software development is the **process of designing, building, testing, and maintaining software applications**. It combines **programming, engineering principles, and problem-solving** to create tools, platforms, and services for users.
 

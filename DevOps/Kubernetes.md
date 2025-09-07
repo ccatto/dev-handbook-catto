@@ -50,7 +50,7 @@ It has become a **core technology for cloud-native applications**, microservices
 ## Kubernetes Architecture
 
 Cluster
-
+```
 ├── Control Plane
 │   ├── API Server
 │   ├── Scheduler
@@ -61,3 +61,4 @@ Cluster
 ├── kubelet
 ├── kube-proxy
 └── Container runtime (Docker, containerd)
+```

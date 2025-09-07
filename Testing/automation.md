@@ -1,5 +1,3 @@
-# Automation Testing
-
 # Automation Testing - Catto Developer Handbook
 
 **Automation Testing** is the use of software tools to execute pre-scripted tests on an application automatically, instead of manually testing. It is essential for **repetitive, regression, and large-scale testing**, helping ensure quality while saving time.

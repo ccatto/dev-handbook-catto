@@ -1,7 +1,4 @@
-# Vue
-
-
-# Vue.js Overview for Frontend + Node/NestJS Backend
+# Vue.js Overview for Frontend - Catto Dev Handbook
 
 **Vue.js** is a progressive JavaScript framework for building interactive user interfaces. It is designed to be incrementally adoptable and can scale between a library and a full-featured framework.
 

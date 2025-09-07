@@ -1,5 +1,3 @@
-# Docker
-
 # Docker Overview for Containerized Applications
 
 **Docker** is a platform for building, shipping, and running applications in containers. Containers package an application and its dependencies, ensuring consistent behavior across environments.

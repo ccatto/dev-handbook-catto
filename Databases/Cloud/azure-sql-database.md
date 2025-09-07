@@ -1,4 +1,4 @@
-# Azure SQL Database - Developer Handbook
+# Azure SQL Database - Catto Developer Handbook
 
 **Azure SQL Database** is a **fully managed relational database service** provided by Microsoft Azure. It is based on **SQL Server engine**, but offers **cloud-native capabilities**, such as scaling, high availability, automated backups, and security.
 

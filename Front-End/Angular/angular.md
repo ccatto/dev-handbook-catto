@@ -1,7 +1,4 @@
-# Angular
-
-
-# Angular Overview for Frontend + Node/NestJS Backend
+# Angular Overview for Frontend | Catto Dev Handbook
 
 **Angular** is a full-featured, TypeScript-based framework for building scalable and maintainable web applications. It is maintained by Google and uses a component-based architecture similar to React and Vue.js.
 

@@ -1,6 +1,5 @@
-# EF - Entity Framework 
-
-# Entity Framework Core (.NET) Overview for C# Web API + Angular Frontend
+# Entity Framework Core (.NET) Overview ORM 
+## Catto Dev Handbook
 
 **Entity Framework (EF) Core** is a lightweight, extensible, cross-platform version of Microsoft’s popular ORM (Object-Relational Mapper) for .NET. It simplifies database access by mapping C# classes to database tables and generating SQL queries automatically.
 

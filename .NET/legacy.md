@@ -11,7 +11,7 @@ Legacy
 ## Overview
 
 - **Full framework for Windows applications**, including ASP.NET, Windows Forms, WPF, and WCF.  
-- Supports **C#, VB.NET, and F#**.  
+- Supports **C#, VB.NET, and F#**.  ( these day I feel it is all C#;)
 - Provides a **large class library** for networking, database access, security, and UI.  
 - Integrated with **Visual Studio** for rich development tooling.  
 - Still widely used in **enterprise applications**, legacy systems, and internal tooling.  

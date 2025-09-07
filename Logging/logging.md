@@ -1,6 +1,4 @@
-# Logging
-
-# Logging - Developer Handbook
+# Logging - Catto Developer Handbook
 
 Logging is the **process of recording information about a system’s execution**, errors, and events. Proper logging helps developers **debug, monitor, and maintain applications** effectively.
 
@@ -68,7 +66,7 @@ var app = builder.Build();
 app.MapGet("/", () => "Hello Logging!");
 app.Run();
 ```
-# Logging in Node.js
+## Logging in Node.js
 
 ## Popular Libraries
 

@@ -1,6 +1,4 @@
-# Node Testing
-
-# Node.js Testing - Developer Handbook
+# Node.js Testing - Catto Developer Handbook
 
 Testing is a **critical part of Node.js development** to ensure that applications are reliable, maintainable, and scalable. Node.js supports **unit, integration, and end-to-end (E2E) testing**, leveraging both JavaScript and TypeScript testing frameworks.
 

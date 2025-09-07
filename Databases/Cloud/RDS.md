@@ -1,6 +1,4 @@
-# RDS
-
-# AWS RDS Overview for C# Web API + Angular Frontend
+# AWS RDS Overview Relational Database Service
 
 **AWS RDS (Relational Database Service)** is a managed database service similar to Azure SQL Database. It allows you to run relational databases in the cloud without managing the underlying infrastructure. For a **C# Web API + Angular frontend** architecture, here’s a breakdown of common RDS usage and related services:
 

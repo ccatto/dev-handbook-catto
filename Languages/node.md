@@ -1,6 +1,4 @@
-# Node 
-
-# Node.js - Developer Handbook
+# Node.js - Catto Developer Handbook
 
 **Node.js** is a **cross-platform, JavaScript runtime environment** built on Chrome’s V8 engine that allows developers to run JavaScript **outside of the browser**, enabling server-side programming.  
 
@@ -64,8 +62,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 ### Verify Installation
 You can verify the installation of Node.js and npm by running these commands in your terminal:
 
-```
+```bash
 node -v
+
 npm -v
 
 ```

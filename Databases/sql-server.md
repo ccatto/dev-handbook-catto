@@ -1,5 +1,3 @@
-# SQL Server
-
 # SQL Server - Catto Developer Handbook
 
 **Microsoft SQL Server** is a **relational database management system (RDBMS)** that has been around since the late 1980s. It’s widely used in enterprise environments and is known for stability, scalability, and deep integration with the Microsoft ecosystem (.NET, Azure, Power BI, etc.).

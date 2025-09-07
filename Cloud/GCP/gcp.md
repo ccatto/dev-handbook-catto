@@ -1,6 +1,4 @@
-# GCP docs
-
-# GCP Developer Handbook - Catto
+# GCP Catto Developer Handbook
 
 This folder contains notes, quick-start guides, and best practices for commonly used Google Cloud Platform services, focused on C# Web API backends, TypeScript front ends, and cloud architecture.
 

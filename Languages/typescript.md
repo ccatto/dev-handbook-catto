@@ -1,6 +1,4 @@
-# Typescript
-
-# TypeScript Overview for Angular Frontend + Node/NestJS Backend
+# TypeScript Overview | Catto Dev Handbook
 
 **TypeScript** is a strongly typed superset of JavaScript that adds optional static types. It compiles to plain JavaScript and is widely used in Angular, Node.js, and NestJS applications.
 
@@ -94,29 +92,6 @@ function identity<T>(arg: T): T {
   return arg;
 }
 const result = identity<string>('Hello TypeScript');
-```
-
----
-
-## 🔹 Code Flow Diagram
-
-```
-[ Client Browser ]
-        |
-        v
-[ Angular Component ]
-        |
-        v
-[ Angular Service ]
-        |
-        v
-[ Backend Controller (NestJS/Node) ]
-        |
-        v
-[ Backend Service ]
-        |
-        v
-[ Database / ORM (Prisma / EF Core) ]
 ```
 
 ---

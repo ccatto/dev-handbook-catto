@@ -37,8 +37,6 @@ Throughout history, certain software developers have **shaped programming, compu
 28. **Niklaus Wirth** – Creator of **Pascal**, **Modula-2**, and **Oberon** programming languages.  
 29. **John Resig** – Creator of **jQuery**, influential in simplifying JavaScript development.  
 30. **Douglas Crockford** – Author of **JavaScript: The Good Parts**, advocate for structured JavaScript.  
-
--- Some others too this is a bit more personal list: 
 31. **Dave Noderer** - One of the founders of a local Florida .NET User that I met so many people from and learned quite a bit from and Founder Computer Ways, Inc. 
 32. **Jeff Atwood** Coding horror blog and helped create stack overflow;
 33. **John Resig** Created jQuery;
@@ -57,8 +55,9 @@ Throughout history, certain software developers have **shaped programming, compu
 46. **Changpeng Zhao** co-founder and former CEO of Binance
 47. **Matthew Rathbone** creator of Beekeeper studio my favorite DB IDE
 48. **Kamil Myśliwiec** creator of Nest.js my current fav server side node framework for apis
+49. **Evan You** creator of vite and vue;
 
-
+from 31 on is a bit more personal for me not so much global;
 ---
 
 ## Observations

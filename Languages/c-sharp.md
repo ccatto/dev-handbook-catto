@@ -1,6 +1,4 @@
-# C# 
-
-# C# - Developer Handbook
+# C# - Catto Developer Handbook
 
 **C# (C-Sharp)** is a **modern, object-oriented programming language** developed by Microsoft as part of the .NET ecosystem. It is designed for building **robust, scalable, and high-performance applications** on Windows, web, mobile, cloud, and cross-platform environments.
 
@@ -39,7 +37,8 @@
 | **C# 9.0** | 2020 | Records, init-only properties, top-level statements |
 | **C# 10.0** | 2021 | Global usings, file-scoped namespaces |
 | **C# 11.0** | 2022 | Raw string literals, list patterns, generic math |
-| **C# 12.0** | 2023+ | (Latest planned features, pending final release) |
+| **C# 12.0** | 2023 | Introduces primary constructors for all types |
+| **C# 13.0** | 2024+ | Adds params collections (like params Span<T>) |
 
 > Note: Use the latest stable version for modern development to leverage language improvements and performance benefits.
 

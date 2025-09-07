@@ -1,6 +1,4 @@
-# AWS
-
-# AWS Developer Handbook - Catto
+# AWS Catto Developer Handbook 
 
 This folder contains notes, quick-start guides, and best practices for commonly used AWS services, focused on web APIs, cloud architecture, and full-stack development.
 

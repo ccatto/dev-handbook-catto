@@ -1,6 +1,4 @@
-# Azure
-
-# Azure Developer Handbook - Catto
+# Azure Catto Developer Handbook
 
 This folder contains notes, quick-start guides, and best practices for commonly used Azure services, focused on C# Web API backends, TypeScript front ends, and cloud architecture.
 

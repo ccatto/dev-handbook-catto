@@ -1,6 +1,4 @@
-# Next.js
-
-# Next.js Overview for Angular/React Frontend + Node/NestJS Backend
+# Next.js Overview - Catto Dev Handbook
 
 **Next.js** is a React-based framework for building server-side rendered (SSR), static, and hybrid web applications. It is widely used for modern frontends with React or TypeScript and integrates easily with APIs and backend services like NestJS.
 

@@ -1,6 +1,4 @@
-# Python
-
-# Python - Developer Handbook
+# Python - Catto Developer Handbook
 
 **Python** is a **high-level, interpreted, general-purpose programming language** known for its **readability, simplicity, and versatility**.  
 

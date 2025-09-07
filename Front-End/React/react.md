@@ -1,5 +1,4 @@
-# React
-# React Overview for Frontend + Node/NestJS Backend
+# React Overview for Frontend - Catto Dev Handbook
 
 **React** is a popular JavaScript library for building interactive and dynamic user interfaces. It allows developers to create reusable components, manage state efficiently, and build scalable web applications.
 

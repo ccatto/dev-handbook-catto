@@ -1,5 +1,3 @@
-# IDEs 
-
 # IDEs & Database Clients - Catto Developer Handbook
 
 This section provides an overview of popular **Integrated Development Environments (IDEs)** and **database clients** used by developers. It covers why these tools are widely adopted and key features that make them valuable for modern development.

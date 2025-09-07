@@ -1,6 +1,4 @@
-# Blazor
-
-# Blazor - Developer Handbook
+# Blazor - Catto Developer Handbook
 
 **Blazor** is a modern **web framework from Microsoft** that allows developers to build **interactive web applications using C# instead of JavaScript**. It runs in the browser via **WebAssembly** or on the server via **SignalR**, enabling full-stack .NET development with a single language.
 

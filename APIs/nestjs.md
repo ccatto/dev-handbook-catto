@@ -1,6 +1,6 @@
 # Nest.js
 
-# NestJS Overview for C# Web API + Angular Frontend
+# NestJS Overview for Node Server Side Apps - APIs
 
 **NestJS** is a progressive Node.js framework for building efficient, scalable, and maintainable server-side applications. It uses **TypeScript** by default and is heavily inspired by Angular’s architecture, making it ideal for teams familiar with Angular.
 
@@ -45,6 +45,71 @@
   * Interceptors: modify responses or handle cross-cutting concerns (logging, caching).
 
 ---
+
+## 🔹 Resolvers in NestJS
+
+Resolvers are a key part of building **GraphQL APIs** with NestJS. They act like **controllers** in REST — mapping incoming GraphQL queries, mutations, and subscriptions to the appropriate service logic.
+
+### ✨ How They Work
+* **Queries** → Handle read operations (fetching data).
+* **Mutations** → Handle write operations (create, update, delete).
+* **Subscriptions** → Handle real-time data via WebSockets.
+
+Resolvers use **decorators** such as:
+* `@Resolver()` → Defines a resolver for a specific GraphQL type.
+* `@Query()` → Maps to a GraphQL query.
+* `@Mutation()` → Maps to a GraphQL mutation.
+* `@Subscription()` → Maps to a GraphQL subscription.
+* `@ResolveField()` → Resolves relationships or computed fields.
+
+---
+
+### 📂 Folder Structure with Resolvers
+When using GraphQL, the module folder typically looks like this:
+
+/src
+└── modules
+    └── users
+        ├── users.resolver.ts   # Handles GraphQL queries and mutations for users. It acts as the entry point for API requests, routing them to the appropriate service.
+        ├── users.service.ts    # Contains the core business logic for user-related operations, such as creating, updating, and retrieving user data.
+        ├── users.module.ts     # Defines the module, bundling the resolver, service, and other components together.
+        └── dto/
+            ├── create-user.input.ts # A Data Transfer Object (DTO) for the data required to create a new user.
+            ├── update-user.input.ts # A DTO for the data required to update an existing user.
+            └── user.output.ts       # A DTO that defines the structure of the data returned for a user.
+
+### 🔄 Code Flow with Resolvers
+
+```
+[ Client (GraphQL Playground / Apollo Client) ]
+|
+v
+[ Resolver (Query / Mutation) ]
+|
+v
+[ Service Layer ]
+|
+v
+[ Repository / ORM Layer ]
+|
+v
+[ Database ]
+```
+
+
+* Client executes a GraphQL query or mutation.
+* Resolver delegates logic to a **service**.
+* Service calls repository/ORM for database access.
+* Database result flows back through the resolver to the client.
+
+---
+
+### ✅ Why Use Resolvers?
+* **Flexible queries**: Clients can request exactly what they need.
+* **Strong typing**: Aligns with TypeScript and GraphQL schemas.
+* **Separation of concerns**: Resolvers stay thin, delegating logic to services.
+* **Real-time support**: Subscriptions allow live updates (e.g., chat apps, dashboards).
+
 
 ## 🔹 Best Practices for Folder Structure
 
@@ -135,4 +200,4 @@
 
 ## 🔹 Summary
 
-NestJS is a modern, scalable framework for Node.js backend applications, ideal for teams building SPAs with Angular. Its architecture encourages modularity, dependency injection, and maintainability. It integrates well with databases, microservices, and cloud platforms, making it a strong choice for enterprise-level web applications.
+NestJS is a modern, scalable framework for Node.js backend applications, ideal for teams building SPAs with typescript frontend frameworks like Next; React; Vue & Angular. Its architecture encourages modularity, dependency injection, and maintainability. It integrates well with databases, microservices, and cloud platforms, making it a strong choice for enterprise-level web applications.

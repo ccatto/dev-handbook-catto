@@ -1,5 +1,3 @@
-# CI/CD - Continuous Integration / Continuous Delivery
-
 # CI/CD (Continuous Integration / Continuous Delivery) Overview
 
 **CI/CD** is a set of practices and tools that enable development teams to deliver code changes more frequently, reliably, and efficiently. It is fundamental to modern DevOps workflows.
