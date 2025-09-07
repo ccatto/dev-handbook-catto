@@ -1,10 +1,10 @@
 # dev-handbook-catto
-Developer Handbook – Notes, quick starts, and guides on C#, web APIs, Azure, AWS, Angular, React, Next.js, NestJS, GraphQLand more.
+Catto Developer Handbook – Notes, quick starts, and guides on C#, web APIs, Azure, AWS, Angular, React, Next.js, NestJS, GraphQLand more.
 
 
 # Developer Handbook by Catto
 
-Welcome to the **Developer Handbook**, a collection of notes, quick-start guides, and technical documentation covering APIs, cloud services, front-end frameworks, databases, .NET technologies, architecture, testing, and DevOps practices.  
+Welcome to the **Catto Developer Handbook**, a collection of notes, quick-start guides, and technical documentation covering APIs, cloud services, front-end frameworks, databases, .NET technologies, architecture, testing, and DevOps practices.  
 
 This repo is organized by topic and technology to make it easy to browse and reference.
 
