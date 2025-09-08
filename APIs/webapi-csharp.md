@@ -25,6 +25,28 @@
 
 ---
 
+## C# Web API Flow (ASP.NET Core)
+```mermaid
+flowchart TD
+    A[Client (Browser / Mobile App)] -->|HTTP Request| B[Controller]
+    B -->|Validation / Routing| C[Service Layer]
+    C -->|Business Logic| D[Repository / Data Access]
+    D -->|SQL Query / EF Core| E[Database]
+    E -->|Results| D
+    D --> C
+    C --> B
+    B -->|JSON Response| A
+```
+> 🔑 **Explanation:**
+
+- **Client** calls an endpoint (e.g., `GET /api/users`).
+- **Controller** handles the request and delegates work.
+- **Service Layer** applies business logic.
+- **Repository/Data Access** talks to the database (via EF Core, Dapper, or raw SQL).
+- **Response** flows back up the chain as JSON to the client.
+
+---
+
 ## 🔹 Common Architectural Patterns
 
 * **Dependency Injection (DI)**

@@ -1,10 +1,8 @@
-Legacy
-
- Legacy ASP.NET, WinForms, WCF, WPF, XML, etc
-
- # Legacy .NET / .NET Framework 4.8 - Developer Handbook
+# Legacy .NET / .NET Framework 4.8 - Developer Handbook
 
 **.NET Framework** is the **classic, Windows-only version of .NET**, first released in **2002**, with the latest version being **4.8** (released in 2019). It provides a **robust runtime, libraries, and tooling** for building desktop, web, and enterprise applications on Windows.
+
+##### Legacy ASP.NET, WinForms, WCF, WPF, XML, etc
 
 ---
 

@@ -1,5 +1,3 @@
-# Nest.js
-
 # NestJS Overview for Node Server Side Apps - APIs
 
 **NestJS** is a progressive Node.js framework for building efficient, scalable, and maintainable server-side applications. It uses **TypeScript** by default and is heavily inspired by Angular’s architecture, making it ideal for teams familiar with Angular.
@@ -80,23 +78,13 @@ When using GraphQL, the module folder typically looks like this:
 
 ### 🔄 Code Flow with Resolvers
 
+```mermaid
+flowchart TD
+A[[ Client (GraphQL Playground / Apollo Client) ] ] --> B[ Resolver (Query / Mutation) ]
+B --> C[ Service Layer ]
+C --> D[ Repository / ORM Layer ]
+D --> E[ Database ]
 ```
-[ Client (GraphQL Playground / Apollo Client) ]
-|
-v
-[ Resolver (Query / Mutation) ]
-|
-v
-[ Service Layer ]
-|
-v
-[ Repository / ORM Layer ]
-|
-v
-[ Database ]
-```
-
-
 * Client executes a GraphQL query or mutation.
 * Resolver delegates logic to a **service**.
 * Service calls repository/ORM for database access.

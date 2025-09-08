@@ -49,7 +49,7 @@
 ---
 
 ## 🔹 Best Practices for Folder Structure (Node.js + MongoDB)
-
+```graphql
 /src
 │ app.ts
 │ database.ts # MongoDB connection
@@ -65,7 +65,7 @@
 │
 └─ controllers
 └─ user.controller.ts
-
+```
 
 * **Models** → Define document structure (using Mongoose or schema validation).
 * **Repositories** → Data access methods (find, insert, update).

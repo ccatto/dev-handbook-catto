@@ -23,6 +23,33 @@
 
 ---
 
+## Angular and Vite
+
+- Angular traditionally uses **Angular CLI (Webpack-based)** for builds and development.  
+- With **Vite**, Angular projects can achieve **faster development server start times** and **hot module replacement (HMR)**.  
+- Common approaches to use Vite with Angular:  
+  - **Nx + Vite**: Use Nx monorepo tooling to generate Angular apps with Vite support.  
+  - **vite-plugin-angular**: Community plugin to integrate Angular compilation with Vite.  
+- Benefits for Angular projects:  
+  - Faster rebuilds and live reloads during development.  
+  - Simplified configuration compared to Angular CLI’s Webpack setup.  
+  - Ability to share Vite plugins across multiple frameworks in a monorepo.
+
+---
+
+## Vite and Vue
+
+- **Creator:** Evan You (also the creator of Vue.js) designed Vite to improve **Vue development experience**.  
+- **Integration with Vue:** Vite provides **native support for Vue Single File Components (SFCs)**, enabling fast hot module replacement (HMR) and instant dev server start.  
+- **Benefits for Vue developers:**
+  - Near-instant project startup.
+  - Lightning-fast updates when editing components.
+  - Optimized production builds using Rollup.
+- **Framework-agnostic:** Although Vite works best initially with Vue, it now fully supports React, Svelte, Angular, and other frameworks.
+
+
+---
+
 ## Installation
 
 ```bash
