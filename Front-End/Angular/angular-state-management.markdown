@@ -479,15 +479,16 @@ export class CartComponent {
 
 ```mermaid
 flowchart TD
-    A[ProductDetailComponent] -->|addToCart()| B[CartService]
-    B -->|updates signal itemsSignal| C[CartComponent]
-    C -->|reactive UI update| D[Display Cart Items & Total Price]
+    A["ProductDetailComponent"] -->|addToCart()| B["CartService"]
+    B -->|updates signal itemsSignal| C["CartComponent"]
+    C -->|reactive UI update| D["Display Cart Items & Total Price"]
     B -->|updates computed totalPrice| D
 
     style A fill:#f9f,stroke:#333,stroke-width:1px
     style B fill:#9f9,stroke:#333,stroke-width:1px
     style C fill:#9ff,stroke:#333,stroke-width:1px
     style D fill:#ff9,stroke:#333,stroke-width:1px
+
 ```
 
 **Explanation**:
@@ -502,16 +503,16 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    A[ProductDetailComponent] -->|dispatch addItem action| B[Store (NgRx)]
-    B -->|Reducer updates cart state| C[Cart State in Store]
-    C -->|select cart$ observable| D[CartComponent]
-    D -->|async pipe updates UI| E[Display Cart Items & Total Price]
+    A["ProductDetailComponent"] -->|dispatch addItem action| B["Store (NgRx)"]
+    B -->|Reducer updates cart state| C["Cart State in Store"]
+    C -->|select cart$ observable| D["CartComponent"]
+    D -->|async pipe updates UI| E["Display Cart Items & Total Price"]
 
     style A fill:#f9f,stroke:#333,stroke-width:1px
     style B fill:#9f9,stroke:#333,stroke-width:1px
     style C fill:#9ff,stroke:#333,stroke-width:1px
     style D fill:#ff9,stroke:#333,stroke-width:1px
-    style E fill:#ffb,stroke:#333,stroke-width:_z
+    style E fill:#ffb,stroke:#333,stroke-width:1px
 ```
 
 **Explanation**:

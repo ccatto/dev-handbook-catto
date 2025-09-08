@@ -22,7 +22,7 @@
 
 ## Typical Folder Structure
 A common Express project structure looks like this:
-
+```graphql
 my-express-app/
 ├── node_modules/       # Installed npm packages
 ├── src/
@@ -37,7 +37,7 @@ my-express-app/
 ├── package.json        # Project metadata and dependencies
 ├── .env                # Environment variables
 └── README.md           # Project documentation
-
+```
 
 ## Best Practices
 - Keep routes, controllers, and business logic separate for maintainability.

@@ -28,7 +28,7 @@
 ## C# Web API Flow (ASP.NET Core)
 ```mermaid
 flowchart TD
-    A[Client (Browser / Mobile App)] -->|HTTP Request| B[Controller]
+    A["Client - Browser or Mobile App"] -->|HTTP Request| B[Controller]
     B -->|Validation / Routing| C[Service Layer]
     C -->|Business Logic| D[Repository / Data Access]
     D -->|SQL Query / EF Core| E[Database]

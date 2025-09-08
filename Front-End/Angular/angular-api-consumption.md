@@ -33,11 +33,10 @@ In Angular applications, data is typically accessed via REST APIs or GraphQL API
 ### Angular API Consumption Flow
 ```mermaid
 flowchart TD
-    A[Component (UI)] -->|calls| B[Angular Service]
-    B -->|REST: HttpClient / GraphQL: Apollo| C[API Request]
-    C -->|Response JSON / GraphQL Data| D[Service Processing]
-    D -->|Observable/Stream| A
-
+    A["Component (UI)"] -->|calls| B["Angular Service"]
+    B -->|REST: HttpClient / GraphQL: Apollo| C["API Request"]
+    C -->|Response JSON / GraphQL Data| D["Service Processing"]
+    D -->|Observable / Stream| A
 ```
 > 🔑 **Explanation:**
 

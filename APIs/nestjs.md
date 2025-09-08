@@ -80,10 +80,10 @@ When using GraphQL, the module folder typically looks like this:
 
 ```mermaid
 flowchart TD
-A[[ Client (GraphQL Playground / Apollo Client) ] ] --> B[ Resolver (Query / Mutation) ]
-B --> C[ Service Layer ]
-C --> D[ Repository / ORM Layer ]
-D --> E[ Database ]
+    A[["Client - GraphQL Playground or Apollo Client"]] --> B["Resolver (Query / Mutation)"]
+    B --> C["Service Layer"]
+    C --> D["Repository / ORM Layer"]
+    D --> E["Database"]
 ```
 * Client executes a GraphQL query or mutation.
 * Resolver delegates logic to a **service**.
