@@ -1,4 +1,4 @@
-# Docker Overview for Containerized Applications
+# 🐳 Docker Overview for Containerized Applications
 
 **Docker** is a platform for building, shipping, and running applications in containers. Containers package an application and its dependencies, ensuring consistent behavior across environments.
 
@@ -144,6 +144,90 @@ services:
 * Tag images for **versioning and rollback**.
 * Scan images for **security vulnerabilities**.
 * Use **environment variables** instead of hardcoding secrets.
+
+---
+
+> 🐳 Docker: Image vs Container
+
+| **Docker Image** | **Docker Container** |
+|------------------|---------------------|
+| Blueprint / template for application. | Running instance of an image. |
+| Read-only. | Read-write (can store data while running). |
+| Built once (via Dockerfile). | Created via `docker run`. |
+| Can be pushed to a registry. | Exists only while running (unless persisted). |
+
+## Analogy
+- **Image** = Class (definition)
+- **Container** = Object (instance of the class)
+
+## ✅ Summary Cheat Sheet
+- **React**: Re-renders when props, state, context, or parent render changes.
+- **Middleware**: Used for auth, logging, side effects — multiple can be chained.
+- **JWT**: Uses header + payload + signature; the signature proves integrity.
+- **YAML**: Multi-step syntax improves readability and maintainability.
+- **Docker**: Image = blueprint, container = running process.
+
+---
+
+> 🐳 Docker Commands Cheat Sheet (PostgreSQL)
+
+## 1. Pull the PostgreSQL Image
+```bash
+docker pull postgres:latest
+```
+
+## 2. Run a PostgreSQL Container
+```bash
+docker run -d \
+  --name my-postgres \
+  -e POSTGRES_USER=myuser \
+  -e POSTGRES_PASSWORD=mypassword \
+  -e POSTGRES_DB=mydatabase \
+  -p 5432:5432 \
+  postgres:latest
+```
+- `-d` → Run in detached mode (background)
+- `--name` → Container name
+- `-e` → Environment variables (user, password, database)
+- `-p` → Port mapping (host:container)
+
+## 3. List Running Containers
+```bash
+docker ps
+```
+
+## 4. Stop a Running Container
+```bash
+docker stop my-postgres
+```
+
+## 5. Remove a Container
+```bash
+docker rm my-postgres
+```
+
+## 6. View Container Logs
+```bash
+docker logs my-postgres
+```
+
+## 7. Enter a Running Container (for psql)
+```bash
+docker exec -it my-postgres psql -U myuser -d mydatabase
+```
+
+## 8. Restart a Container
+```bash
+docker restart my-postgres
+```
+
+## 9. Remove Image (if needed)
+```bash
+docker rmi postgres:latest
+```
+
+## Tip
+Use `docker-compose` for more complex setups with multiple containers (e.g., Postgres + app + Redis).
 
 ---
 

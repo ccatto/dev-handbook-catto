@@ -145,6 +145,229 @@ export const useUsers = () => {
 
 ---
 
+---
+
+> ⚛️ React Component Re-Render Triggers
+
+A React component **re-renders** when:
+- **Props change** — parent passes new props.
+- **State changes** — component's `useState` or `useReducer` state updates.
+- **Context changes** — when a `useContext` value changes.
+- **Parent re-renders** — causing children to re-render (unless memoized).
+- **Force update** — manually triggered with something like `useState` hack or `forceUpdate`.
+
+> **Optimization Tip:** Use `React.memo`, `useMemo`, and `useCallback` to avoid unnecessary re-renders.
+
+---
+
+## 🛡️ Middleware in React
+
+Middleware isn’t built into React itself, but it’s common in:
+- **State management libraries** like Redux (e.g., `redux-thunk`, `redux-saga`).
+- **Routing** with Next.js or React Router (custom middleware-like logic).
+
+### Typical Use Cases
+- **Authentication & Authorization** – check if the user is allowed to see a route.
+- **Logging / Analytics** – capture events before they reach the reducer.
+- **API Calls** – intercept actions and fetch data.
+
+✅ **Yes, you can have multiple middlewares.** They are chained and executed in order.
+
+---
+
+
+---
+
 ## 🔹 Summary
 
 React is a flexible, efficient, and widely-adopted library for building interactive user interfaces. Its component-based architecture, strong community, and compatibility with modern backend APIs make it a top choice for building scalable web applications.
+
+----
+
+---
+
+> React Re-Renders, Hooks, and Hook Cleanup Functions
+
+Understanding re-renders and hooks is key to building performant and
+maintainable React applications.
+
+## 1. What is a Hook?
+
+A **hook** is a special function that lets you "hook into" React
+features such as state, lifecycle, and context from functional
+components.\
+Hooks were introduced in React 16.8 and replaced the need for many
+class-based lifecycle methods.
+
+### Rules of Hooks
+
+-   **Call hooks only at the top level** (never inside loops,
+    conditions, or nested functions).
+-   **Call hooks only from React functions** (components or custom
+    hooks).
+
+------------------------------------------------------------------------
+
+## 2. Common React Hooks
+
+Here are some of the most commonly used hooks:
+
+  -----------------------------------------------------------------------
+  Hook                         Purpose
+  ---------------------------- ------------------------------------------
+  `useState`                   Manage local component state
+
+  `useEffect`                  Perform side effects (fetching data,
+                               subscriptions, timers)
+
+  `useContext`                 Consume a React context value
+
+  `useMemo`                    Memoize expensive computations
+
+  `useCallback`                Memoize callback functions to avoid
+                               re-creation
+
+  `useReducer`                 Manage complex state logic (like Redux but
+                               local)
+
+  `useRef`                     Persist values across renders without
+                               causing re-renders
+  -----------------------------------------------------------------------
+
+Example using `useState`:
+
+``` jsx
+import { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <button onClick={() => setCount(count + 1)}>
+      Count: {count}
+    </button>
+  );
+}
+```
+
+------------------------------------------------------------------------
+
+## 3. Creating a Custom Hook
+
+You can create your own hooks to encapsulate reusable logic.
+
+Example: A custom hook for window size:
+
+``` jsx
+import { useState, useEffect } from 'react';
+
+function useWindowSize() {
+  const [size, setSize] = useState({ width: window.innerWidth, height: window.innerHeight });
+
+  useEffect(() => {
+    function handleResize() {
+      setSize({ width: window.innerWidth, height: window.innerHeight });
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return size;
+}
+
+// Usage in a component
+function Component() {
+  const { width, height } = useWindowSize();
+  return <p>Window size: {width} x {height}</p>;
+}
+```
+
+------------------------------------------------------------------------
+
+## 4. React Re-Renders
+
+A React component re-renders when: - **State changes**: Calling
+`setState` or `useState` setter updates the component. - **Props
+change**: New props cause React to re-render the component with updated
+data. - **Context value changes**: When a `useContext` value changes,
+all consuming components re-render. - **Parent re-renders**: If a parent
+re-renders, its children re-render (unless memoized).
+
+### Avoiding Unnecessary Re-Renders
+
+-   Use `React.memo` for pure components.
+-   Use `useCallback` and `useMemo` to prevent re-creating functions and
+    objects on every render.
+-   Split large components into smaller ones to minimize re-render
+    scope.
+
+------------------------------------------------------------------------
+
+## 5. Hook Cleanup Functions
+
+Many React hooks allow you to return a **cleanup function** to handle
+side effects when: - A component unmounts. - A dependency changes (for
+hooks with a dependency array).
+
+Example with `useEffect`:
+
+``` jsx
+import { useEffect } from 'react';
+
+function Example() {
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      console.log("Tick...");
+    }, 1000);
+
+    // Cleanup function
+    return () => {
+      clearInterval(intervalId);
+      console.log("Interval cleared");
+    };
+  }, []); // Empty dependency array -> runs once on mount, cleanup on unmount
+
+  return <div>Check the console</div>;
+}
+```
+
+### Why Cleanup Functions Are Important
+
+-   Prevent **memory leaks** (e.g., orphaned timers, event listeners).
+-   Keep behavior predictable across component re-renders.
+-   Free up resources when components unmount.
+
+------------------------------------------------------------------------
+
+## 6. Best Practices
+
+1.  **Always clean up side effects**
+    -   Event listeners, timers, subscriptions, sockets should be
+        cleaned up to avoid bugs.
+2.  **Use dependency arrays carefully**
+    -   Missing dependencies can lead to stale data.
+    -   Over-specifying dependencies can cause excessive re-renders.
+3.  **Optimize performance**
+    -   Combine cleanup with memoization to avoid unnecessary effect
+        re-runs.
+
+------------------------------------------------------------------------
+
+## 7. Common Pitfalls
+
+-   Forgetting to add dependencies to `useEffect` → stale values.
+-   Forgetting to clean up → memory leaks.
+-   Triggering infinite re-renders by updating state inside `useEffect`
+    without proper dependencies.
+
+------------------------------------------------------------------------
+
+## Summary
+
+-   Hooks allow functional components to use state, lifecycle, and other
+    React features.
+-   React re-renders occur on **state, prop, context, or parent
+    updates**.
+-   **Hook cleanup functions** help manage side effects safely.
+-   Properly managing re-renders and cleanup leads to **faster and more
+    stable React apps**.

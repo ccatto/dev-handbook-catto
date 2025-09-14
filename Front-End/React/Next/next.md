@@ -38,7 +38,7 @@
 
 ## 🔹 Folder Structure Example
 
-```
+```graphql
 /my-next-app
 │  package.json
 │  next.config.js
@@ -61,6 +61,53 @@
 │
 ├─ public
 │   └─ images
+```
+
+> Another directory example: 
+```graphql
+my-app/
+├── app/                        # App Router entry
+│   ├── (public)/               # Public routes (no auth required)
+│   │   ├── login/
+│   │   ├── register/
+│   │   └── about/
+│   │
+│   ├── (protected)/            # Protected routes (auth required)
+│   │   ├── dashboard/
+│   │   ├── settings/
+│   │   └── organizations/
+│   │
+│   ├── api/                    # API routes (server functions)
+│   │   └── auth/[...nextauth]/ # NextAuth handler
+│   │
+│   ├── layout.tsx              # Root layout
+│   ├── page.tsx                # Landing page
+│   └── globals.css             # Global styles
+│
+├── components/                 # Shared UI components
+│   ├── ui/                     # Atomic / shadcn-ui components
+│   ├── layout/                 # Navbar, Sidebar, Footer
+│   └── auth/                   # LoginForm, RegisterForm
+│
+├── lib/                        # Shared utilities
+│   ├── auth.ts                 # NextAuth config
+│   ├── prisma.ts               # Prisma client
+│   ├── api.ts                  # API fetch wrappers
+│   └── validators.ts           # Zod schemas
+│
+├── hooks/                      # Custom React hooks
+│
+├── styles/                     # Tailwind, CSS modules, variables
+│
+├── prisma/                     # Prisma schema + migrations
+│
+├── public/                     # Static assets
+│
+├── next.config.js
+├── package.json
+└── tsconfig.json
+
+
 ```
 
 * **pages/** → React pages and API routes.

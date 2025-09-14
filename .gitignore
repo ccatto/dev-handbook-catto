@@ -15,7 +15,7 @@ __pycache__/
 site/
 
 # VS Code / JetBrains
-.vscode/
+
 .idea/
 
 # Env / secrets
