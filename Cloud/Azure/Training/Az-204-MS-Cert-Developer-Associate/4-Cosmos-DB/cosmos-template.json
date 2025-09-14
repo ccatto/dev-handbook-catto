@@ -1,0 +1,7 @@
+{
+  "name": "catto-account",
+  "location": "eastus",
+  "locationName": "East US",
+  "defaultExperience": "Core (SQL)",
+  "isZoneRedundant": "false"
+}

@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Code_Function_Example": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7006",
+      "launchBrowser": false
+    }
+  }
+}
