@@ -104,7 +104,7 @@ Availability tests in Application Insights let you monitor uptime and responsive
 ### Test types  
 - **Standard test** – Recommended. Checks endpoint availability, performance, TLS/SSL validity, HTTP verbs, custom headers/data.  
 - **Custom TrackAvailability test** – Use SDK method `TrackAvailability()` for custom apps.  
-- **URL ping test (classic)** – Legacy; being retired Sept 30, 2026.  
+- **URL ping test (classic)** – Legacy; being retired Sept 30, 2026.   
 
 ✅ Up to 100 tests per Application Insights resource.  
 
@@ -161,4 +161,71 @@ In this module, you learned how to:
 - Describe how Application Insights works and how it collects events and metrics.  
 - Instrument an app for monitoring, and perform availability tests.  
 - Use Application Map to help you monitor performance and troubleshoot issues.  
+
+---
+
+## Question 15
+
+You are developing **Azure-based solutions**.  
+
+A **.NET application** must receive a message each time an **Azure Virtual Machine** finishes processing data.
+
+**Requirements:**
+
+- The message must be **received and processed** by the application  
+- Once processed, the message should **not persist** (i.e., no duplication or storage)  
+
+**Which .NET object should you use to receive these messages?**
+
+---
+
+### Options
+- QueueClient  
+- **SubscriptionClient** — *Correct*  
+- TopicClient  
+- CloudQueueClient  
+
+---
+
+### ✅ Correct Answer
+**SubscriptionClient**
+
+---
+
+### 📖 Overall Explanation
+
+**SubscriptionClient** is part of **Azure Service Bus** and is used to receive messages from a **topic subscription**. This is ideal for **publish-subscribe (pub/sub)** scenarios:
+
+- A **topic** publishes messages  
+- Multiple **subscriptions** can independently receive messages  
+- Messages are **removed after successful processing**  
+
+**Scenario Context:**
+
+- The VM sends a message to a **Service Bus Topic** when it finishes processing  
+- The .NET app uses a **SubscriptionClient** to receive the message  
+- Once processed, the message is **no longer retained**, satisfying the requirement
+
+---
+
+### ❌ Explanation of Incorrect Answers
+
+**QueueClient**  
+- Receives messages from a **Service Bus Queue** (point-to-point)  
+- Not ideal for pub/sub scenarios where multiple consumers may need the message  
+
+**TopicClient**  
+- Used to **send messages** to a topic, not to receive them  
+
+**CloudQueueClient**  
+- Part of **Azure Storage Queues**  
+- Does not support **pub/sub patterns**  
+- Messages persist until explicitly deleted, even after processing, which violates the requirement
+
+---
+
+### 🔗 Reference
+[Azure.Messaging.ServiceBus - Process messages](#)
+
+---
 

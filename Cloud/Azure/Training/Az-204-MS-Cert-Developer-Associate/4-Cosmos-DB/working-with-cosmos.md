@@ -27,7 +27,7 @@ This module introduces both client and server-side programming on Azure Cosmos D
 - Implement change feed notifications
 
 # Explore Microsoft .NET SDK v3 for Azure Cosmos DB  
-**Completed – 100 XP**
+
 
 This unit introduces the Azure Cosmos DB .NET SDK v3 (`Microsoft.Azure.Cosmos` NuGet package) for API for NoSQL. It standardizes terminology using **containers** (collections, graphs, or tables) and **items** (documents, edges/vertices, or rows). The SDK provides async APIs for efficient CRUD operations with Cosmos DB resources.
 
@@ -51,6 +51,8 @@ This unit introduces the Azure Cosmos DB .NET SDK v3 (`Microsoft.Azure.Cosmos` N
   - `CreateItemAsync` – Adds a new item (requires `id` and partition key).  
   - `ReadItemAsync` – Reads an item by ID and partition key.  
   - `GetItemQueryIterator` – Queries items using SQL-like syntax with parameters.  
+
+The ReadItemAsync method of the container class of .NET SDK for Azure Cosmos DB has two mandatory parameters: `partitionKey` and `itemId`. The consistencyLevel parameter is part of the optional requestOptions parameter of the ReadItemAsync.
 
 ## Additional Resources
 - [azure-cosmos-dotnet-v3 GitHub repository](https://github.com/Azure/azure-cosmos-dotnet-v3) – Latest sample solutions and examples.  

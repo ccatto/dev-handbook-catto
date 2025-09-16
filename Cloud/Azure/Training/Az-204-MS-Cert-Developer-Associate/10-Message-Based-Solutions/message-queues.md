@@ -157,7 +157,7 @@ This unit shows how to work with Azure Queue Storage using .NET and the **Azure.
 - **Peek Message** → `queueClient.PeekMessages()`  
 - **Update Message** → `queueClient.UpdateMessage(messageId, popReceipt, "new content", timeout)`  
 - **Dequeue Message** → `ReceiveMessages()` + `DeleteMessage()` (two-step to ensure reliability)  
-- **Get Queue Length** → `queueClient.GetProperties().ApproximateMessagesCount`  
+- **Get Queue Length** → `queueClient.GetProperties().ApproximateMessagesCount` ‼️  
 - **Delete Queue** → `queueClient.Delete()`  
 
 ### Summary
@@ -212,6 +212,62 @@ In this module, you learned how to:
 - Send and receive messages from a Service Bus queue using .NET.  
 - Identify key components of Azure Queue Storage.  
 - Create and manage Azure Queue Storage queues and messages using .NET.  
+
+---
+
+## Question 18
+
+You are developing a **Python image-rendering application** that leverages **GPU resources** and runs in an **Azure Container Instances (ACI) Linux container**.
+
+The application requires a **secret value** to be securely provided **only at container startup**, and it must **only be accessible from within the container**.
+
+**Goal:**  
+Ensure that the secret is securely passed to the container at runtime.
+
+---
+
+### Options
+- **Create an environment variable and set the secureValue property to the secret value** — *Correct*  
+- Add the secret value to the container image and use a managed identity  
+- Add the secret value directly to the application code and set the container startup command  
+- Mount a secret volume containing the secret value in a secrets file — *Correct*  
+
+---
+
+### ✅ Correct Answers
+
+**1. Create an environment variable and set `secureValue`**  
+- Azure Container Instances allow you to define **environment variables at runtime**  
+- Setting the secret as a **secure environment variable** ensures:  
+  - The value is **not logged or exposed externally**  
+  - Accessible **only inside the container**
+
+**2. Mount a secret volume in a secrets file**  
+- ACI supports **secret volumes**, which can be mounted into the container at runtime  
+- The secret is stored in a **file inside the volume**, accessible only from the container  
+- **Not baked into the image**, keeping it secure
+
+---
+
+### ❌ Explanation of Incorrect Answers
+
+**Add the secret value to the container image and use a managed identity**  
+- Baking secrets into the image is **insecure**; anyone with image access can extract it  
+- Managed identities are for **resource access**, not secret injection
+
+**Add the secret value directly to the application code and set the startup command**  
+- Hardcoding secrets violates **security best practices**  
+- Startup commands are **not a secure place** to manage secrets
+
+**Add the secret to Azure Blob Storage and generate a SAS token**  
+- SAS tokens themselves are **secrets** and still require a secure delivery method  
+- Does not inherently solve the **secure injection** problem
+
+---
+
+### 🔗 References
+- [Use environment variables in Azure Container Instances](#)  
+- [Mount a secret volume in Azure Container Instances](#)
 
 ---
 
