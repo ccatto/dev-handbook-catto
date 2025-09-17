@@ -69,6 +69,40 @@
 - **Flexibility**: Runs scripts or programs (C#, PowerShell, Node.js, Python, etc.).
 - **Best For**: When you already run an App Service (web app/API) and want background tasks to run alongside it.
 
+---
+>  Azure Functions Hosting Plans
+
+- **Consumption** Plan = Serverless model (similar to Logic Apps Consumption, Event Grid)
+- **Premium** Plan = Functions-specific elastic premium tier
+- **Dedicated** Plan = Uses standard App Service plans (shared with Web Apps, API Apps, etc.)
+
+## 1. Consumption Plan (Serverless)
+- **Timeout**: 5 minutes (default), 10 minutes (maximum)
+- **Scaling**: Event-driven, automatic scaling to zero
+- **Memory**: Up to 1.5 GB
+- **Pricing**: Pay-per-execution (GB-seconds + executions)
+- **Cold Start**: Yes, can experience cold starts
+- **Use Case**: Sporadic workloads, cost-sensitive applications
+
+## 2. Premium Plan (Elastic Premium)
+- **Timeout**: 30 minutes (default), unlimited (configurable)
+- **Scaling**: Event-driven with pre-warmed instances
+- **Memory**: Up to 14 GB
+- **Pricing**: Pay for compute resources (vCPU and memory)
+- **Cold Start**: Minimal due to pre-warmed instances
+- **Use Case**: Consistent workloads, longer processing times
+
+## 3. Dedicated Plan (App Service Plan)
+- **Timeout**: 30 minutes (default), unlimited (configurable)
+- **Scaling**: Manual or auto-scale (doesn't scale to zero)
+- **Memory**: Varies by App Service SKU (Basic, Standard, Premium)
+- **Pricing**: Pay for allocated compute resources (always running)
+- **Cold Start**: No cold starts
+- **Use Case**: Predictable workloads, integration with other App Service apps
+
+---
+
+
 ## Summary
 
 - **Azure Functions**: Code-first, event-driven compute (serverless apps & APIs).

@@ -2,20 +2,20 @@
 
 1. Implement Azure App Service web apps
 
-1.1.  Develop Solutions for Microsoft Azure
+* 1.1.  Develop Solutions for Microsoft Azure
 
 [Deploy a containerized app to Azure App Service](https://microsoftlearning.github.io/mslearn-azure-developer/instructions/azure-app-service/01-app-service-deploy-container.html)
 
-1.4. Explore Azure **App Service** deployment slots
+* 1.4. Explore Azure **App Service** deployment slots
 [Swap deployment slots in Azure App Service](https://microsoftlearning.github.io/mslearn-azure-developer/instructions/azure-app-service/02-app-service-deployment-slots.html)
 
 2. Implement Azure **Functions**
 
-[Create an Azure Function with Visual Studio Code](https://microsoftlearning.github.io/mslearn-azure-developer/instructions/azure-functions/01-functions-create-vscode-http.html)
+* [Create an Azure Function with Visual Studio Code](https://microsoftlearning.github.io/mslearn-azure-developer/instructions/azure-functions/01-functions-create-vscode-http.html)
 
 3. Develop solutions that use **Blob** storage
 
-[Create Blob storage resources with the .NET client library](https://microsoftlearning.github.io/mslearn-azure-developer/instructions/azure-storage/01-blob-storage-resources-dotnet.html)
+* [Create Blob storage resources with the .NET client library](https://microsoftlearning.github.io/mslearn-azure-developer/instructions/azure-storage/01-blob-storage-resources-dotnet.html)
 
 4. Develop solutions that use Azure **Cosmos DB**
 

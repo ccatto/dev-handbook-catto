@@ -32,3 +32,9 @@ func start
 Publish to Azure
 
 func azure functionapp publish <APP_NAME>
+
+> Azure CLI 
+
+```bash
+az --version
+```
