@@ -503,16 +503,17 @@ flowchart TD
 
 ```mermaid
 flowchart TD
-    A["ProductDetailComponent"] -->|dispatch addItem action| B["Store (NgRx)"]
-    B -->|Reducer updates cart state| C["Cart State in Store"]
-    C -->|select cart$ observable| D["CartComponent"]
-    D -->|async pipe updates UI| E["Display Cart Items & Total Price"]
+    A["ProductDetailComponent"] -->|"dispatch addItem action"| B["Store (NgRx)"]
+    B -->|"Reducer updates cart state"| C["Cart State in Store"]
+    C -->|"select cart$ observable"| D["CartComponent"]
+    D -->|"async pipe updates UI"| E["Display Cart Items & Total Price"]
 
     style A fill:#f9f,stroke:#333,stroke-width:1px
     style B fill:#9f9,stroke:#333,stroke-width:1px
     style C fill:#9ff,stroke:#333,stroke-width:1px
     style D fill:#ff9,stroke:#333,stroke-width:1px
     style E fill:#ffb,stroke:#333,stroke-width:1px
+
 ```
 
 **Explanation**:

@@ -2,9 +2,7 @@
 
 1. Implement Azure App Service web apps
 
-* 1.1.  Develop Solutions for Microsoft Azure
-
-[Deploy a containerized app to Azure App Service](https://microsoftlearning.github.io/mslearn-azure-developer/instructions/azure-app-service/01-app-service-deploy-container.html)
+* 1.1.  Develop Solutions for Microsoft Azure [Deploy a containerized app to Azure App Service](https://microsoftlearning.github.io/mslearn-azure-developer/instructions/azure-app-service/01-app-service-deploy-container.html)
 
 * 1.4. Explore Azure **App Service** deployment slots
 [Swap deployment slots in Azure App Service](https://microsoftlearning.github.io/mslearn-azure-developer/instructions/azure-app-service/02-app-service-deployment-slots.html)

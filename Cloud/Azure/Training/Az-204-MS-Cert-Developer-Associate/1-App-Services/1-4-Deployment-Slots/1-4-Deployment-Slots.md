@@ -1,7 +1,6 @@
 # 🚀 Explore Azure App Service Deployment Slots
 
 **Module Duration:** 57 minutes  
-**XP Earned:** 900 XP  
 **Level:** Intermediate  
 **Role:** Developer  
 **Product:** Azure App Service  

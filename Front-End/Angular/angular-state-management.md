@@ -50,7 +50,7 @@ State management is a core concept in modern front-end applications, ensuring co
 ---
 
 ## 🔹 Typical Folder Structure with NgRx
-
+```graphql
 /src/app
 │
 ├─ state
@@ -66,25 +66,26 @@ State management is a core concept in modern front-end applications, ensuring co
 │
 └─ services
 └─ user.service.ts
-
+```
 
 ---
 
 ## 🔹 Code Flow Diagram (NgRx)
 
-[ Component Dispatches Action ]
-|
-v
-[ Action ]
-|
-v
-[ Reducer ] <-- (Effects for async work like APIs)
-|
-v
-[ Store (Global State) ]
-|
-v
-[ Component Selects Data ]
+```mermaid
+flowchart TD
+    A["Component Dispatches Action"] --> B["Action"]
+    B --> C["Reducer"]
+    C -->|Optional: Effects for async work (APIs)| D["Store (Global State)"]
+    D --> E["Component Selects Data"]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bfb,stroke:#333,stroke-width:2px
+    style D fill:#ffb,stroke:#333,stroke-width:2px
+    style E fill:#fbf,stroke:#333,stroke-width:2px
+```
+
 
 
 * Component triggers an **Action**.
