@@ -46,3 +46,64 @@ In this challenge, we want to display **movie budgets** and **durations** using 
 This is an example of what the functionality should look like for the completed exercise.  
 You may mimic this style, but it is **not required**.
 
+Solution Code: 
+
+```ts
+// src/app/pipes/million-dollar.pipe.ts
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'millionDollar',
+  standalone: true
+})
+export class MillionDollarPipe implements PipeTransform {
+  // before
+  //transform(value: unknown): unknown {
+  // return null;
+
+  // solution:
+  transform(amount?: string | number): string {
+    let range = ""+amount;
+    let split = range?.split("-") ?? [];
+    if (split.length > 1) {
+      range = split[0] + " to $" + split[1];
+    }
+    return `$${ range } million`
+  }
+}
+```
+
+* duration pipe: 
+```ts
+//src/app/pipes/min-to-duration.pipe.ts
+import { Pipe, PipeTransform } from '@angular/core';
+
+@Pipe({
+  name: 'minToDuration',
+  standalone: true
+})
+export class MinToDurationPipe implements PipeTransform {
+  transform(minutes?: string): string {
+    if (!minutes) return '';
+    const hours = Math.floor(+minutes / 60);
+    const min = +minutes % 60;
+    return `${hours}h ${min}min`
+  }
+}
+```
+
+* Movie item 
+```ts
+// src/app/movie-item/movie-item.component.ts
+import {MillionDollarPipe} from '../pipes/million-dollar.pipe';
+import {MinToDurationPipe} from '../pipes/min-to-duration.pipe';
+
+  <span>Budget:  {{ movie().budget | millionDollar }} </span>
+  <span>Duration: {{ movie().duration | minToDuration }}</span>
+
+// need to add the imports:
+  imports: [
+    MillionDollarPipe,
+    MinToDurationPipe
+  ],
+```

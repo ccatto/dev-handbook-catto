@@ -31,3 +31,41 @@ In this challenge, we want to highlight movies on mouse over by changing their b
 This is an example of what the functionality should look like for the completed exercise.  
 You can mimic this style if you want, but it is **not required**.
 
+> Here is code updates: 
+
+```ts
+// src/app/highlight.directive.ts
+import {Directive,HostBinding,HostListener} from '@angular/core';
+
+@Directive({
+  selector: '[appHighlight]',
+  standalone: true
+})
+export class HighlightDirective {
+
+  // Added next 3:
+  @HostBinding('class.highlight')
+  highlight: boolean = false;
+
+  @HostListener('mouseover')
+  onMouseOver(): void {
+    this.highlight = true;
+  }
+
+  @HostListener('mouseout')
+  onMouseOut(): void {
+    this.highlight = false;
+  }
+}
+```
+
+Added the appHighlight selector: 
+```ts
+<!-- src/app/app.component.html -->
+<div class="container">
+  @for(movie of movies(); track movie.id) {
+    <app-movie-item [movie]="movie" appHighlight />
+  }
+</div>
+```
+
