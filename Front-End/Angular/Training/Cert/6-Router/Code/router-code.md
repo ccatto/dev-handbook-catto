@@ -33,6 +33,14 @@ In this challenge, we want to be able to display movie details by clicking on th
 - If you see the `data-test` attribute anywhere in the boilerplate, **don't remove it**.
 
 ---
+ 
+> Solution provided details: 
+
+
+
+--- 
+> My 1st attempt: 
+
 
 ## Example of Finished Application
 
