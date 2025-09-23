@@ -95,8 +95,23 @@ in the template we devin movie var and change from movie() function to movie var
     , AsyncPipe
 
 ```
+// update to home html template:
+```html
+<!-- // src/app/home/home.component.html -->
+ <!-- OLD -->
+<!-- <div class="container">
+  @for(movie of movies(); track movie.id) {
+    <app-movie-item [movie]="movie" appHighlight [isFavorite]="favoritesService.isFavorite(movie)()" (toggleFavorite)="favoritesService.toggleFavorite(movie)"/>
+  }
+</div> -->
 
-
+<!-- New -->
+<div class="container">
+  @for(movie of movies$ | async; track movie.id) {
+    <app-movie-item [movie]="movie" appHighlight [isFavorite]="favoritesService.isFavorite(movie)()" (toggleFavorite)="favoritesService.toggleFavorite(movie)"/>
+  }
+</div>
+```
 ---
 
 > 1st attempt Solution:

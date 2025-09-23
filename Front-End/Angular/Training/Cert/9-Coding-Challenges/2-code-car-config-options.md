@@ -39,3 +39,10 @@ By completing this challenge, you will learn how to:
 - Dynamically fetch and display **configuration options** based on user selections 🌐  
 - Maintain reactive **state using Signals** to manage selections ⚡  
 - Update the UI dynamically with **dropdowns, checkboxes, and computed values** 🔄
+
+
+> Official Solution: 
+
+
+> 1st attempt my solution: 
+
