@@ -45,7 +45,84 @@ By completing this bug-fix challenge, you will learn how to:
 
 > 2nd official attempt: 
 
+
+-----------
 > 1st attempt:
+---
+Bug Fix Summary
+Here's a complete summary of all the fixes and which files were updated:
+Bug #1: Tow hitch option persists when switching models
+Problem: When switching from Cybertruck (with tow hitch selected) to Model 3, the tow hitch option remained active even though Model 3 shouldn't have it.
+Files Updated:
+
+src/app/configurator.service.ts
+
+Fix: Added reset logic in the selectModel() method to clear all options when switching models:
+```
+typescript
+selectModel(code: CarModel["code"]) {
+  const model = this.allModels().find(model => model.code === code);
+  this.currentCar.set(model);
+  this.currentColor.set(model?.colors[0]);
+  
+  // Reset options when switching models
+  this.currentConfig.set(undefined);
+  this.currentWheelIsYoke.set(false);
+  this.currentTowHitchIsSelected.set(false);
+}
+```
+Bug #2: Step 3 is clickable before selecting a car config
+Problem: Users could navigate to Step 3 even when no config was selected in Step 2.
+Files Updated:
+
+Your main app component or navigation component (wherever step navigation is handled)
+
+Fix: Use the existing step3Ready computed signal to disable Step 3 navigation:
+```html
+<button 
+  [disabled]="!service.step3Ready()"
+  (click)="goToStep(3)">
+  Step 3: Summary
+</button>
+```
+Bug #3: Selected model and color don't show when returning to Step 1
+Problem: When navigating back to Step 1, the dropdowns showed "Choose..." instead of the currently selected model and color.
+Files Updated:
+
+src/app/step1/step1.component.html
+src/app/step2/step2.component.html
+
+Fix: Added value binding to all form controls:
+Step 1 changes:
+```html
+<!-- Model select -->
+<select #model [value]="service.currentCar()?.code || '0'" (change)="service.selectModel(model.value)">
+
+<!-- Color select -->
+<select #color [value]="service.currentColor()?.code || ''" (change)="service.selectColor(color.value)">
+```
+Step 2 changes:
+
+```html
+<!-- Config select -->
+<select #config [value]="service.currentConfig()?.id || '0'" (change)="service.selectConfig(config.value)">
+
+<!-- Checkboxes -->
+<input type="checkbox" #hitch [checked]="service.currentTowHitchIsSelected()" (change)="service.currentTowHitchIsSelected.set(hitch.checked)"/>
+<input type="checkbox" #yoke [checked]="service.currentWheelIsYoke()" (change)="service.currentWheelIsYoke.set(yoke.checked)"/>
+```
+Files Summary:
+
+src/app/configurator.service.ts - Fixed Bug #1
+src/app/step1/step1.component.html - Fixed Bug #3
+src/app/step2/step2.component.html - Fixed Bug #3
+Your navigation component - Needs update for Bug #2
+
+The key principle across all fixes is ensuring that the UI always reflects the current state in the service, and that state changes properly cascade through the application.
+
+---
+> older notes:
+--- 
 <!-- src/app/step1/step1.component.html -->
 <h1>Step 1: Choose your Model and color</h1>
 Model:
