@@ -151,5 +151,5 @@ export class AppModule { }
 
 Understanding these fundamentals is crucial for Angular development! 🎯
 
-Whew some good questions
+Whew some good questions;
 
