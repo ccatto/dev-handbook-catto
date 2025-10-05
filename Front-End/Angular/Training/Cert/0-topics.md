@@ -158,4 +158,3 @@
   - Angular Language Service  
 - [Download VS Code](https://code.visualstudio.com/)  
 
--- end
